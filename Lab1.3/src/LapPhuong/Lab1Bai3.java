@@ -19,7 +19,7 @@ public class Lab1Bai3 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Nhap chieu dai canh cua hinh lap phuong: ");
 		canh = scanner.nextDouble();
-		theTich =canh*canh*canh;
+		theTich =Math.pow(canh,3);
 		System.out.printf("The tich cua hinh: %.2f", theTich);
 		
 	}
