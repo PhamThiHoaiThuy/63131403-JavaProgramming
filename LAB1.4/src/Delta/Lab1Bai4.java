@@ -25,7 +25,7 @@ public class Lab1Bai4 {
 		System.out.print("Nhap he so c: ");
 		c = scanner.nextDouble();
 		
-		delta = b*b -(4*a*c);
+		delta = Math.pow(b,2) -(4*a*c);
 		System.out.printf("Can delta la: %.2f", Math.sqrt(delta));
 	}
 
