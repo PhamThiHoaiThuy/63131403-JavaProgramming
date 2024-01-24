@@ -25,9 +25,9 @@ public class Lab1Bai2 {
 		double chuVi, dienTich;
 		chuVi = (dai+rong)*2;
 		dienTich = dai*rong;
-		System.out.printf("Chu vi cua HCN: %f", chuVi);
-		System.out.printf("Dien tich cua HCN: %f", dienTich);
-		System.out.printf("Canh nho nhat cua HCN: %f", Math.min(dai, rong));
+		System.out.printf("Chu vi cua HCN: %.2f", chuVi);
+		System.out.printf("Dien tich cua HCN: %.2f", dienTich);
+		System.out.printf("Canh nho nhat cua HCN: %.2f", Math.min(dai, rong));
 
 
 	}
