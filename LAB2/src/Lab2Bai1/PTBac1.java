@@ -1,14 +1,14 @@
 /**
  * 
  */
-package PTBac1;
+package Lab2Bai1;
 
 import java.util.Scanner;
 
 /**
  * 
  */
-public class Lab2Bai1 {
+public class PTBac1 {
 
 	/**
 	 * @param args
