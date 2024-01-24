@@ -24,7 +24,7 @@ public class tbcong {
 		System.out.print("Nhập giá trị c: ");
 		c = scanner.nextInt();
 		
-		System.out.printf("Trung bình cộng của a,b,c là: %.2f", (a*2+b+c)/3);
+		System.out.printf("Trung bình cộng của a,b,c là: %.2f", (float)(a*2+b+c)/3);
 	}
 
 }
