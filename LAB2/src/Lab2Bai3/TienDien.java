@@ -21,7 +21,7 @@ public class TienDien {
 		soDien = scanner.nextDouble();
 		 if(0 <= soDien && soDien<=50)
 			 System.out.printf("So tien can thanh toan la: %.2f", soDien*1000);
-		 if(soDien >50)
+		 if(soDien > 50)
 			 System.out.printf("So tien can thanh toan la: %.2f", soDien*1200);
 		 
 		
