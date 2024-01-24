@@ -31,7 +31,7 @@ public class Lab2Bai1 {
 			}
 		}
 		else {
-			System.out.printf("Nghiem cua phuong trinh la: %.2f",-b/a);
+			System.out.printf("Nghiem cua phuong trinh la: %.2f",(float)-b/a);
 		}
 	}
 
