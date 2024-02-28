@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ManHinhTinhToan extends JFrame {
 
@@ -59,21 +61,43 @@ public class ManHinhTinhToan extends JFrame {
 		contentPane.add(txtb);
 		
 		JButton btnCong = new JButton("Cộng");
+		btnCong.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//code xu li cong
+				HamXuLiCong();
+				
+			}
+		});
 		btnCong.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnCong.setBounds(50, 196, 85, 29);
 		contentPane.add(btnCong);
 		
 		JButton btnTru = new JButton("Trừ");
+		btnTru.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HamXuLiTru();
+			}
+		});
 		btnTru.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnTru.setBounds(166, 196, 85, 29);
 		contentPane.add(btnTru);
 		
 		JButton btnNhan = new JButton("Nhân");
+		btnNhan.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HamXuLiNhan();
+			}
+		});
 		btnNhan.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnNhan.setBounds(275, 196, 85, 29);
 		contentPane.add(btnNhan);
 		
 		JButton btnChia = new JButton("Chia");
+		btnChia.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HamXuLiChia();
+			}
+		});
 		btnChia.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnChia.setBounds(392, 196, 85, 29);
 		contentPane.add(btnChia);
@@ -89,6 +113,50 @@ public class ManHinhTinhToan extends JFrame {
 		lblKtQuTrnh.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblKtQuTrnh.setBounds(66, 266, 161, 22);
 		contentPane.add(lblKtQuTrnh);
+	}
+	void HamXuLiCong() {
+		String stra = txta.getText();
+		String strb = txtb.getText();
+		double soA = Double.parseDouble(stra);
+		double soB = Double.parseDouble(strb);
+		
+		double tong = soA+soB;
+		
+		//hiển thị kq
+		txtKetQua.setText(String.valueOf(tong));
+	}
+	void HamXuLiTru() {
+		String stra = txta.getText();
+		String strb = txtb.getText();
+		double soA = Double.parseDouble(stra);
+		double soB = Double.parseDouble(strb);
+		
+		double tong = soA-soB;
+		
+		//hiển thị kq
+		txtKetQua.setText(String.valueOf(tong));
+	}
+	void HamXuLiNhan() {
+		String stra = txta.getText();
+		String strb = txtb.getText();
+		double soA = Double.parseDouble(stra);
+		double soB = Double.parseDouble(strb);
+		
+		double tong = soA*soB;
+		
+		//hiển thị kq
+		txtKetQua.setText(String.valueOf(tong));
+	}
+	void HamXuLiChia() {
+		String stra = txta.getText();
+		String strb = txtb.getText();
+		double soA = Double.parseDouble(stra);
+		double soB = Double.parseDouble(strb);
+		
+		double tong = soA/soB;
+		
+		//hiển thị kq
+		txtKetQua.setText(String.valueOf(tong));
 	}
 
 }
