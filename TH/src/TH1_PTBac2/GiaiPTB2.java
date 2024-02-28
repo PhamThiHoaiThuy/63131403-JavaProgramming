@@ -17,7 +17,7 @@ import java.awt.event.ActionEvent;
 
 public class GiaiPTB2 {
 
-    private JFrame frame;
+    private JFrame frmPhngTrnhBc;
     private JTextField txA;
     private JTextField txB;
     private JTextField txC;
@@ -28,7 +28,7 @@ public class GiaiPTB2 {
             public void run() {
                 try {
                     GiaiPTB2 window = new GiaiPTB2();
-                    window.frame.setVisible(true);
+                    window.frmPhngTrnhBc.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -47,33 +47,35 @@ public class GiaiPTB2 {
      * Initialize the contents of the frame.
      */
     private void initialize() {
-        frame = new JFrame();
-        frame.getContentPane().setForeground(new Color(255, 0, 0));
-        frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 20));
-        frame.setBounds(100, 100, 790, 468);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setLayout(null);
+        frmPhngTrnhBc = new JFrame();
+        frmPhngTrnhBc.setTitle("PHƯƠNG TRÌNH BẬC 2");
+        frmPhngTrnhBc.getContentPane().setForeground(new Color(255, 0, 0));
+        frmPhngTrnhBc.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 20));
+        frmPhngTrnhBc.setBounds(100, 100, 790, 468);
+        frmPhngTrnhBc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frmPhngTrnhBc.getContentPane().setLayout(null);
         
         JPanel panel = new JPanel();
         panel.setForeground(new Color(0, 0, 0));
-        panel.setBounds(10, 61, 756, 304);
-        frame.getContentPane().add(panel);
-        panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(245, 0, 0), new Color(255, 0, 0)), "Nhập vào các số a, b, c", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0))); 
+        panel.setBounds(20, 36, 756, 304);
+        frmPhngTrnhBc.getContentPane().add(panel);
+        panel.setBorder(null); 
         panel.setLayout(null);
         
-        JLabel lblNewLabel_1 = new JLabel("a:");
+        JLabel lblNewLabel_1 = new JLabel("Nhập a:");
+        lblNewLabel_1.setBackground(new Color(0, 128, 0));
         lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblNewLabel_1.setBounds(206, 28, 51, 25);
+        lblNewLabel_1.setBounds(117, 28, 99, 25);
         panel.add(lblNewLabel_1);
         
-        JLabel lblNewLabel_1_1 = new JLabel("b:");
+        JLabel lblNewLabel_1_1 = new JLabel("Nhập b:");
         lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblNewLabel_1_1.setBounds(206, 75, 51, 25);
+        lblNewLabel_1_1.setBounds(117, 81, 99, 25);
         panel.add(lblNewLabel_1_1);
         
-        JLabel lblNewLabel_1_2 = new JLabel("c:");
+        JLabel lblNewLabel_1_2 = new JLabel("Nhập c:");
         lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-        lblNewLabel_1_2.setBounds(206, 122, 51, 25);
+        lblNewLabel_1_2.setBounds(117, 128, 99, 25);
         panel.add(lblNewLabel_1_2);
         
         txA = new JTextField();
@@ -103,7 +105,7 @@ public class GiaiPTB2 {
         panel.add(txtKetQua);
         txtKetQua.setColumns(10);
         
-        JButton btnGii = new JButton("Giải");
+        JButton btnGii = new JButton("Giải ");
         btnGii.setBounds(300, 243, 116, 37);
         panel.add(btnGii);
         btnGii.addActionListener(new ActionListener() {
@@ -113,17 +115,6 @@ public class GiaiPTB2 {
             }
         });
         btnGii.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        
-        JPanel panel_1 = new JPanel();
-        panel_1.setBackground(new Color(192, 192, 192));
-        panel_1.setBounds(0, 0, 776, 40);
-        frame.getContentPane().add(panel_1);
-        panel_1.setLayout(null);
-        
-        JLabel lblNewLabel = new JLabel("GIẢI PHƯƠNG TRÌNH BẬC HAI");
-        lblNewLabel.setBounds(273, 10, 260, 22);
-        panel_1.add(lblNewLabel);
-        lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
     }
 
     void XuLyGiaiPTB2() {
